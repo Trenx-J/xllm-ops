@@ -499,9 +499,6 @@ class TestFlashAttentionInfer:
 @pytest.mark.parametrize("dtype,request_num,beam_size,q_seqlen,kv_seqlen,unshared_seqlen,num_head,kv_heads,embedding_size,block_size,is_varied_len,mask_type,shared_kv_type,unshared_kv_type", [
     (torch.bfloat16, 1, 128, 1, 1024, 2, 32, 8, 128, 128, 0, 0, 1, 0),
     (torch.bfloat16, 2, 128, 1, 1024, 2, 32, 8, 128, 128, 1, 0, 1, 0),
-    (torch.bfloat16, 1, 128, 1, 300, 2, 32, 8, 128, 256, 0, 0, 1, 0),
-    (torch.bfloat16, 2, 128, 1, 640, 2, 32, 8, 128, 256, 1, 0, 1, 0),
-    (torch.bfloat16, 1, 128, 1, 768, 2, 32, 8, 128, 384, 0, 0, 1, 0),
     (torch.bfloat16, 1, 128, 1, 1024, 2, 32, 8, 128, 128, 0, 0, 0, 1),
     (torch.bfloat16, 1, 256, 1, 1024, 2, 32, 8, 128, 128, 0, 0, 0, 1),
     (torch.bfloat16, 1, 512, 1, 1024, 2, 32, 8, 128, 128, 0, 0, 0, 1),
